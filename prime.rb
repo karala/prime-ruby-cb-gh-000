@@ -11,6 +11,8 @@ def prime?(num)
   end
 end
 
+iterations = 100_000
+
 Benchmark.bm do |bm|
   # joining an array of strings
   bm.report do
