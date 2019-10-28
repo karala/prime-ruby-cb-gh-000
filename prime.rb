@@ -1,3 +1,6 @@
+require 'benchmark'
+require 'bigdecimal/math'
+
 def prime?(num)
   if num < 0 or num == 0 or num == 1
     return false
@@ -7,3 +10,5 @@ def prime?(num)
     end
   end
 end
+
+puts benchmark.measure { BigMath.PI(10_000) }
